@@ -7,6 +7,11 @@ services:
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=password
+      - N8N_PROTOCOL=https
+      - WEBHOOK_URL=https://n8nbotti-production.up.railway.app/
+      - N8N_HOST=n8nbotti-production.up.railway.app
+
+    # variable para postgresdb
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
       - DB_POSTGRESDB_DATABASE=n8n
@@ -14,6 +19,7 @@ services:
       - DB_POSTGRESDB_PASSWORD=n8n_password
       - NODE_FUNCTION_ALLOW_EXTERNAL=pg
       - PORT=5555
+      
     ports:
       - "5555:5555"
     depends_on:
