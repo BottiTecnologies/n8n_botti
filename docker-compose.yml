@@ -10,6 +10,8 @@ services:
       - N8N_PROTOCOL=https
       - WEBHOOK_URL=${WEBHOOK_URL}
       - N8N_HOST=${N8N_HOST}
+      - N8N_RUNNERS_ENABLED=true
+
       # Variables para la base de datos
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=${DB_POSTGRESDB_HOST}
